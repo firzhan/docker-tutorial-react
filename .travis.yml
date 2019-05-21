@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t firzhan007/docker-tutorial-react ./
+  - docker build -t firzhan007/docker-tutorial-react -f Dockerfile.dev ./
 
 script:
   - docker run -e CI=true firzhan007/docker-tutorial-react npm test -- --coverage

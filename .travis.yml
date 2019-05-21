@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run -e CI=true firzhan007/docker-tutorial-react npm test -- --coverage
 
-  deploy:
+deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-tutorial-react"
